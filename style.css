@@ -1,0 +1,47 @@
+body{
+    text-align: center;
+    padding: 20px;
+}
+h2{
+    font-size: 2rem;
+    margin-bottom: 2%;
+}
+.text-container{
+    width: 800px;
+    background-color: skyblue;
+    padding: 2rem;
+    margin: 0 18%;
+    display: flex;
+    border-radius: 7px;
+    margin-bottom: 1%;
+}
+.text-container textarea{
+    height: 250px;
+    width: 375px;
+    border-radius: 6px;
+    background: rgb(250, 249, 246);
+    border: 2px solid #777;
+    margin-left: 2px;
+}
+h3{
+    font-size: 2rem;
+    margin-bottom: 4%;
+}
+#input-text, #output-text{
+    padding: 15px 0 0 20px;
+    font-size: 1rem;
+}
+div{
+    margin-bottom: 1%;
+}
+label{
+    font-weight: bold;
+}
+button{
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: darkgreen;
+    color: #ffff;
+    cursor: pointer;
+    border-radius: 12px;
+}
