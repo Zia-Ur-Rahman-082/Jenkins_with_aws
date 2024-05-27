@@ -69,7 +69,7 @@ h1 , h2 ,h3{
 header{
     position: relative;
     height: 95vh;
-    background: url('../img/4.jpg');
+    background-color: #f77f40;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -264,7 +264,7 @@ header{
     height: 760px;
     background: #fff;
    width: 49%;
-   float: left;
+   /*float: left;*/
    padding: 1rem;
 }
 .form-wrapper .company-address i{
@@ -287,8 +287,10 @@ header{
 .form-wrapper  .form{
     height: 760px;
     background: #fff;
-    float: right;
-    width: 49%;
+    /*float: right;*/
+    margin-left: 20%;
+    text-align: center;
+    width: 60%;
     padding: 1.2rem;
 }
 .form-wrapper::after{
