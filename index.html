@@ -1,122 +1,57 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz 2</title>
-    <style>
-        body{
-    text-align: center;
-    padding: 20px;
-}
-h2{
-    font-size: 2rem;
-    margin-bottom: 2%;
-}
-.text-container{
-    width: 800px;
-    background-color: skyblue;
-    padding: 2rem;
-    margin: 0 18%;
-    display: flex;
-    border-radius: 7px;
-    margin-bottom: 1%;
-}
-.text-container textarea{
-    height: 250px;
-    width: 375px;
-    border-radius: 6px;
-    background: rgb(250, 249, 246);
-    border: 2px solid #777;
-    margin-left: 2px;
-}
-h3{
-    font-size: 2rem;
-    margin-bottom: 4%;
-}
-#input-text, #output-text{
-    padding: 15px 0 0 20px;
-    font-size: 1rem;
-}
-div{
-    margin-bottom: 1%;
-}
-label{
-    font-weight: bold;
-}
-button{
-    padding: 10px 20px;
-    margin: 5px;
-    background-color: darkgreen;
-    color: #ffff;
-    cursor: pointer;
-    border-radius: 12px;
-}
-    </style>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Travel Website</title>
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css ">
 </head>
 <body>
-    <h2>Data Encryption and Decryption</h2>
-    <div class="text-container">
-        <div class="input-section">
-            <h3>Input Text</h3>
-            <textarea name="" id="input-text" cols="30" rows="10" placeholder="Enter your text"></textarea>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+            <h1 class="logo lg-heading text-light">WT</h1>
+            <ul class="nav-items">
+                <li class="nav-item"><a href="./Index.html">Home</a></li>
+                <li class="nav-item"><a href="./about.html">About</a></li>
+                <li class="nav-item"><a href="./contact.html">Contact</a></li>
+            </ul>
+            </div>
+        </nav>
+        <div class="header-content">
+            <h1 class="lg-heading text-light">Travel the World</h1>
+            <p class="text-light">Travel the world, experience. it's the best gift given by nature</p>
+            <a href="#" class="btn btn-primary text-red md-heading">Explore places</a>
         </div>
-        <div class="input-section">
-            <h3>Output Text</h3>
-            <textarea name="" id="output-text" cols="30" rows="10" placeholder="Encrypted and Decrypted text "></textarea>
+
+    </header>
+    <section class="showcase">
+        <div class="container">
+            <div class="row row1">
+                <div class="img-box">
+                    <img src="./img/2.jpg" alt="...">
+                </div>
+                <div class="text-box">
+                    <h2 class="lg-heading">DEGANVY , U,X</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, rem sapiente numquam inventore velit veritatis ea soluta aliquid laudantium odit voluptas animi ipsam accusamus dolores minus ullam deserunt voluptatem voluptatibus?</p>
+
+                </div>
+            </div>
+            <div class="row row2">
+                <div class="img-box">
+                    <img src="./img/1.jpg" alt="">
+                </div>
+                <div class="text-box">
+                    <h2 class="lg-heading">desert, egypt</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, rem sapiente numquam inventore velit veritatis ea soluta aliquid laudantium odit voluptas animi ipsam accusamus dolores minus ullam deserunt voluptatem voluptatibus?</p>
+                    
+                </div>
+            </div>
         </div>
-    </div>
-    <div>
-        <label for="key">Encryption Key</label>
-        <input type="number" id="key" min="1" max="25" value="3">
-    </div>
-    <button onclick="encrypt()">Encrypt</button>
-    <button onclick="decrypt()">Decrypt</button>
-    <button onclick="decrypt()">Digital Signature</button>
-    <button onclick="decrypt()">Decrypt</button>
 
-     <script>
-
-function encrypt(){
-    const inputText = document.getElementById("input-text").value;
-    const key = parseInt(document.getElementById("key").value);
-    let cleanedText = inputText.replace(/[^A-Za-z]/g, ''); 
-    let encryptedText = " ";
-    for(let i = 0; i<cleanedText.length; i++){
-        const charCode = cleanedText.charCodeAt(i);
-        if(charCode >=65 && charCode <= 90){
-            //encrypt uppercase
-            encryptedText += String.fromCharCode(((charCode - 65 + key) %26 ) + 65);
-        }
-        else if (charCode >= 97 && charCode <= 122){
-            //encrypt lower case
-            encryptedText += String.fromCharCode(((charCode - 97 + key) %26 ) + 97);
-        }
-    }
-    document.getElementById("output-text").value = encryptedText;
-}
-
-        //decryption
-        function decrypt(){
-        const inputText = document.getElementById("input-text").value;
-        const key = parseInt(document.getElementById("key").value);
-        let cleanedText = inputText.replace(/[^A-Za-z]/g, ''); 
-        let decryptedText = " ";
-        for(let i = 0; i<cleanedText.length; i++){
-            const charCode = cleanedText.charCodeAt(i);
-            if(charCode >=65 && charCode <= 90){
-                //decrypt uppercase
-                decryptedText += String.fromCharCode(((charCode - 65 - key +26) %26 ) + 65);
-            }
-            else if (charCode >= 97 && charCode <= 122){
-                //decrypt lower case
-                decryptedText += String.fromCharCode(((charCode - 97 - key +26) %26 ) + 97);
-            }
-        }
-        document.getElementById("output-text").value = decryptedText;
-}
-     </script>
-
+    </section>
+    
 </body>
 </html>
